@@ -1,36 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <title>Ilm va Mehnat - Рўйхатдан ўтиш</title>
+  <meta charset="UTF-8" />
+  <title>Рўйхатдан ўтиш</title>
 </head>
 <body>
-  <h2>Рўйхатдан ўтиш формаси</h2>
-  <form action="http://localhost:3000/save" method="POST">
-    <label>Ф.И.Ш:</label><br>
-    <input type="text" name="fish" required><br><br>
-
-    <label>Паспорт маълумоти:</label><br>
-    <input type="text" name="pasport" required><br><br>
-
-    <label>Телефон рақами:</label><br>
-    <input type="tel" name="telefon" required><br><br>
-
-    <label>Йўналиш:</label><br>
-    <select name="kasb" required>
-      <option value="">-- Йўналишни танланг --</option>
-      <option>Автослесарь</option>
-      <option>Автоэлектрик</option>
-      <option>Мойкачи</option>
-      <option>Кузовчи</option>
-      <option>Бўёқчи</option>
-      <option>Ҳодовой қисм устаси</option>
-      <option>Автосервисни бошқариш</option>
-    </select><br><br>
-
-    <label>Изоҳ:</label><br>
-    <textarea name="izoh" rows="4" cols="50"></textarea><br><br>
-
+  <h1>Рўйхатдан ўтиш</h1>
+  <form action="/save" method="POST">
+    <input type="text" name="fullName" placeholder="ФИШ" required><br>
+    <input type="text" name="passport" placeholder="Паспорт маълумоти" required><br>
+    <input type="text" name="phone" placeholder="Телефон рақами" required><br>
+    <select name="specialty" required>
+      <option value="Автослесарь">Автослесарь</option>
+      <option value="Автоэлектрик">Автоэлектрик</option>
+      <option value="Шиномонтажчи">Шиномонтажчи</option>
+      <option value="Ходовой часть устаси">Ходовой часть устаси</option>
+      <option value="Кузовчи">Кузовчи</option>
+      <option value="Бояш устаси">Бояш устаси</option>
+      <option value="Компьютер диагностика">Компьютер диагностика</option>
+      <option value="Двигатель устаси">Двигатель устаси</option>
+      <option value="Автосервис бошқарувчиси">Автосервис бошқарувчиси</option>
+    </select><br>
+    <textarea name="notes" placeholder="Изоҳ (ихтиёрий)"></textarea><br>
     <button type="submit">Юбориш</button>
   </form>
 </body>
